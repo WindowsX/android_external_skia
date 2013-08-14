@@ -68,6 +68,9 @@ LOCAL_CFLAGS += -DGR_USE_NEW_GL_SHADER_SOURCE_SIGNATURE=1
 # used for testing
 #LOCAL_CFLAGS += -g -O0
 
+# used for fixing aliasing violations
+LOCAL_CFLAGS += -fno-strict-aliasing
+
 ifeq ($(NO_FALLBACK_FONT),true)
 	LOCAL_CFLAGS += -DNO_FALLBACK_FONT
 endif
